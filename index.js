@@ -51,7 +51,8 @@ app.use(methodOverride('_method')) ;//middleware for method override
 
 // root
 app.get('/',(req,res)=>{
-    res.send('root mai hu abhi ')
+    res.send('root mai hu abhi ');
+    res.render("enter");
 });
 
 
