@@ -37,7 +37,8 @@ const Vlog = require('./models/Vlog');
 //         comment:'hello from ansh'
 //     }
 // ]
-mongoose.connect('mongodb+srv://saranshgupta6252:hdf5J3srZZbmC13x@cluster0.56feotv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(()=>{console.log("Db connected successfully");}).catch((err)=>{
+// mongoose.connect('mongodb+srv://saranshgupta6252:hdf5J3srZZbmC13x@cluster0.56feotv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb://127.0.0.1:27017/vlog').then(()=>{console.log("Db connected successfully");}).catch((err)=>{
     console.log(err);
     console.log("errror");
 })
@@ -51,8 +52,8 @@ app.use(methodOverride('_method')) ;//middleware for method override
 
 // root
 app.get('/',(req,res)=>{
-    res.send('root mai hu abhi ');
-    res.render("enter");
+
+    res.render('enter');
 });
 
 
