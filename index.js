@@ -1,7 +1,10 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
 const express=require('express');
 const app=express();
 const path=require("path");//modeule of node
 const methodOverride=require('method-override') //middleware for override method patch to post
+// const dbURL=
 const { v4: uuid } = require('uuid');
 const mongoose = require("mongoose");
 const Vlog = require('./models/Vlog');
@@ -35,7 +38,7 @@ const Vlog = require('./models/Vlog');
 //         comment:'hello from ansh'
 //     }
 // ]
-mongoose.connect('mongodb://127.0.0.1:27017/restfull').then(()=>{console.log("Db connected successfully");}).catch((err)=>{
+mongoose.connect('mongodb+srv://saranshgupta6252:hdf5J3srZZbmC13x@cluster0.56feotv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(()=>{console.log("Db connected successfully");}).catch((err)=>{
     console.log(err);
     console.log("errror");
 })
